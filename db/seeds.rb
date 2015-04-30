@@ -158,6 +158,7 @@ Book.where(isbn: '0545139708')
   total_in_library:   1,
   created_at:         DateTime.new(2015, 4, 29),
   updated_at:         DateTime.new(2015, 4, 29)
+)
 
 Author.where(name: 'Louisa May Alcott')
     .first_or_create!(
