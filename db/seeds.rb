@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Book.create(
-  isbn:               '054792822X',
+Book.where(isbn: '054792822X')
+    .first_or_create!(
   title:              'The Hobbit',
   author_id:          1,
   genre:              'Fantasy',
@@ -18,3 +18,4 @@ Book.create(
   created_at:         DateTime.new(2015, 4, 29),
   updated_at:         DateTime.new(2015, 4, 29)
 )
+    
