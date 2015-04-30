@@ -31,7 +31,7 @@
         <td><%= book.genre %></td>
         <td><%= book.abstract %></td>
         <td><%= book.pages %></td>
-        <td><%= book.image_cover_url %></td>
+        <td><%= image_tag(book.image_cover_url) %></td>
         <td><%= book.published_on %></td>
         <td><%= book.total_in_library %></td>
         <td><%= book.created_at %></td>
