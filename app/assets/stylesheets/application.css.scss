@@ -16,3 +16,22 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1 a:hover {
+  text-decoration: none;
+}
+
+.well img {
+  float: left;
+  margin-right: 20px;
+}
+
+.well {
+  clear: both;
+  overflow: hidden;
+}
+
+footer {
+  margin: 40px 0 80px;
+  text-align: center;
+}

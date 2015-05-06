@@ -14,12 +14,16 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# gem for pagination
-gem 'kaminari'
-
 # gems for Bootstrap
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
+
+# gem for pagination
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
+
+# gem for password encrypt / decrypt
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
