@@ -1,7 +1,9 @@
 <% @books.each do |book| %>
   <div class="well">
-    <%= image_tag(book.image_cover_url, class: 'img-thumbnail') %>
-    <h3><%= link_to(book.title, book) %></h3>
+    <%= link_to book do %>
+      <%= image_tag(book.image_cover_url, class: 'img-thumbnail') %>
+    <%end%>
+    <h3><%= link_to book.title, book %></h3>
     <h4><%= book.author.name %></h4>
   </div>
 <% end %>
