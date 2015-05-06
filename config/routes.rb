@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => redirect('/users#login')
 
   get "/authors" => "authors#index", as: 'authors'
-
+  get "/authors/:id" => "authors#show", as: 'author'
   resources :users
   resources :books
   # The priority is based upon order of creation: first created -> highest priority.

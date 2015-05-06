@@ -164,7 +164,7 @@ Author.where(name: 'Louisa May Alcott')
     .first_or_create!(
   dob:                Date.parse("29-11-1832"),
   nationality:        'United States',
-  awards:             'None',
+  awards:             '',
   biography:          'Louisa May Alcott was born on November 29, 1832, in Germantown, Pennsylvania. Henry David Thoreau and Ralph Waldo Emerson were family friends. Alcott wrote under various pseudonyms and only started using her own name when she was ready to commit to writing. Her novel Little Women gave Louisa May Alcott financial independence and a lifetime writing career. She died in 1888.',
   image_url:          'authors/alcott.jpg'
 )
@@ -191,7 +191,7 @@ Author.where(name: 'Frances Hodgson Burnett')
     .first_or_create!(
   dob:                Date.parse("24-10-1924"),
   nationality:        'British',
-  awards:             'None',
+  awards:             '',
   biography:          "Frances Eliza Hodgson Burnett (24 November 1849 – 29 October 1924) was an American-English playwright and author. She is best known for her children's stories, in particular Little Lord Fauntleroy (published in 1885–1886), A Little Princess (1905), and The Secret Garden (1911).",
   image_url:          'authors/burnett.jpg'
 )
@@ -200,7 +200,7 @@ Author.where(name: 'L.M. Montgomery')
     .first_or_create!(
   dob:                Date.parse("24-04-1874"),
   nationality:        'Canadian',
-  awards:             'None',
+  awards:             '',
   biography:          "Lucy Maud Montgomery (November 30, 1874 – April 24, 1942), publicly known as L. M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with Anne of Green Gables. Anne of Green Gables was an immediate success. The central character, Anne, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.[1] The first novel was followed by a series of sequels with Anne as the central character. Montgomery went on to publish 20 novels as well as 530 short stories, 500 poems, and 30 essays. Most of the novels were set on Prince Edward Island, Canada, and places in the Canadian province became literary landmarks. She was made an Officer of the Order of the British Empire in 1935.",
   image_url:          'authors/montgomery.jpg'
 )
