@@ -13,7 +13,7 @@
     <% end %>
     <p>
       <label>Books:</label>
-      <%= @author.books do |book| %>
+      <% @author.books.each do |book| %>
         <%= book.title %>
       <% end %>
     </p>
