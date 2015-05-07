@@ -6,25 +6,19 @@
 * ~~Authors seeds~~
 * ~~Authors view all~~
 * ~~Authors view details~~
-
 * ~~Books model~~
 * ~~Books seeds~~
 * ~~Books view all~~
 * ~~Book view details~~
-
 * ~~Reservations model~~
-
 * ~~Users model~~
 * ~~Users seeds~~
-
 * ~~Twitter Bootstrap~~
 * ~~Kanimari pagination~~
-
 
 ## To Do
 
 * Login/logout
-* Users model
 * Users validations
 * Books model validations
 * Authors model validations
