@@ -29,9 +29,13 @@ h1 a:hover {
   margin-right: 10px;
 }
 
-.well img {
+.img-thumbnail {
   float: left;
   margin-right: 20px;
+}
+
+.col-md-2 .img-thumbnail {
+  margin-top: 20px;
 }
 
 .well {
