@@ -2,6 +2,8 @@
 
 <h2>Books</h2>
 
+<%= page_entries_info @books %>
+
 <% @books.each do |book| %>
   <div class="well">
     <%= image_tag(book.image_cover_url, class: 'img-thumbnail') %>
@@ -16,3 +18,5 @@
 <br>
 
 <%= link_to 'New Book', new_book_path %>
+
+<%= paginate @books %>
