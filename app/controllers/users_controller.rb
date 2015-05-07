@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @users = User.order(:email).page(params[:page])
+    @users = User.all
     render :index
   end
 
@@ -51,7 +51,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    redirect_to users_url
+    redirect_to users_url, notice: 'User was successfully destroyed.'
   end
 
   private
@@ -63,7 +63,5 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
-
-end
 
 end
