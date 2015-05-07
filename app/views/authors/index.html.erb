@@ -1,8 +1,12 @@
-<h1>Authors</h1>
+<h2>Authors</h2>
+
+<%= page_entries_info @authors %>
+
 <% @authors.each do |author| %>
-<div>
-    <%= image_tag(author.image_url, size: "200x300") %>
-    <%= link_to(author.name, author) %>
+  <div class="well">
+    <%= image_tag(author.image_url, class: 'img-thumbnail') %>
+    <h3><%= link_to(author.name, author) %></h3>
  </div>
 <% end %>
 
+<%= paginate @authors %>

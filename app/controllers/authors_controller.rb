@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
 
   def index
-    @authors = Author.all
+    @authors = Author.order(:name).page(params[:page])
   end
 
   before_action:set_author, only:[ :show]
@@ -14,4 +14,9 @@ class AuthorsController < ApplicationController
   def set_author
     @author = Author.find(params[:id])
   end
+
+  def author_params
+    params.require(:author)
+  end
+
 end
