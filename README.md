@@ -2,18 +2,23 @@
 
 ## Done
 
-* ~~Books model~~
-* ~~Books seeds~~
-* ~~Books view all~~
-* ~~Twitter Bootstrap~~
-* ~~Kanimari pagination~~
 * ~~Authors model~~
 * ~~Authors seeds~~
 * ~~Authors view all~~
 * ~~Authors view details~~
+
+* ~~Books model~~
+* ~~Books seeds~~
+* ~~Books view all~~
+* ~~Book view details~~
+
 * ~~Reservations model~~
+
 * ~~Users model~~
 * ~~Users seeds~~
+
+* ~~Twitter Bootstrap~~
+* ~~Kanimari pagination~~
 
 
 ## To Do
@@ -21,7 +26,6 @@
 * Login/logout
 * Users model
 * Users validations
-* Books view details
 * Books model validations
 * Authors model validations
 * Destroy dependents if book is destroyed
