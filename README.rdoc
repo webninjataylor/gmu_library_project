@@ -1,5 +1,11 @@
 == Library Project Requirements
 
+* ~~Books model~~
+* ~~Books seeds~~
+* ~~Books view (all)~~
+* ~~Twitter Bootstrap~~
+* ~~Kanimari pagination~~
+
 * Login/logout
 
   * Users have many books through the reservation model
