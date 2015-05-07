@@ -11,6 +11,10 @@
 * ~~Authors seeds~~
 * ~~Authors view all~~
 * ~~Authors view details~~
+* ~~Reservations model~~
+* ~~Users model~~
+* ~~Users seeds~~
+
 
 ## To Do
 
@@ -24,16 +28,14 @@
 * Dropdown of authors when creating a book
 * Authors view details - include list of their books
 * Search for specific books (by title, author, or ISBN)
-* Reserve books, return books, and view reservations
-  * Only one copy of each book per user
+* Reserve books
   * Must re-check number available when reserving in case they had been sitting idle
-  * id, reserved_on, due_on(+7 days), user_id, book_id, created_at, updated_at
-  * belongs_to user and book
+* Return books
+* View reservations
 * Admin users
   * CRUD books
   * View overdue books
 * No SQL injection vulnerabilities
-* Seed users, books, and authors
 * Extra credit
   * User registration
   * User management
