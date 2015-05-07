@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root :to => redirect('/users#login')
+  root 'users#login'
 
   get "/authors" => "authors#index", as: 'authors'
 
