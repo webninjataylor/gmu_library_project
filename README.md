@@ -1,60 +1,41 @@
-== Library Project Requirements
+# Library Project Requirements
+
+## Done
 
 * ~~Books model~~
 * ~~Books seeds~~
-* ~~Books view (all)~~
+* ~~Books view all~~
 * ~~Twitter Bootstrap~~
 * ~~Kanimari pagination~~
+* ~~Authors model~~
+* ~~Authors seeds~~
+* ~~Authors view all~~
+* ~~Authors view details~~
+
+## To Do
 
 * Login/logout
-
-  * Users have many books through the reservation model
-
-  * id, name, user_id, password_digest, admin, created_at, updated_at
-
-* Books list (paginated) and details
-
-  * id, isbn(*), title(*), author_id, genre(*), abstract(*)(min 15), pages(*)(numericality,positive integers), image_cover, published_on(*), total_in_library(*)(numericality,positive integers), created_at, updated_at
-
-  * belongs_to author and has_many reservations
-
-    * destroy dependents if book is destroyed
-
-  * dropdown of authors when creating a book(*)
-
-* Authors list and details (including list of their books)
-  
-  * only one per book
-  
-  * id, name(*), dob(*), nationality(*), awards, biography(*)(min 15), image_url(*)
-
+* Users model
+* Users validations
+* Books view details
+* Books model validations
+* Authors model validations
+* Destroy dependents if book is destroyed
+* Dropdown of authors when creating a book
+* Authors view details - include list of their books
 * Search for specific books (by title, author, or ISBN)
-
 * Reserve books, return books, and view reservations
-  
   * Only one copy of each book per user
-  
   * Must re-check number available when reserving in case they had been sitting idle
-  
   * id, reserved_on, due_on(+7 days), user_id, book_id, created_at, updated_at
-  
   * belongs_to user and book
-
 * Admin users
-  
   * CRUD books
-  
   * View overdue books
-
 * No SQL injection vulnerabilities
-
 * Seed users, books, and authors
-
 * Extra credit
-  
   * User registration
-  
   * User management
-  
   * Author management
   
