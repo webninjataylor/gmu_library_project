@@ -8,15 +8,11 @@
   <div class="well">
     <%= image_tag(book.image_cover_url, class: 'img-thumbnail') %>
     <h3><%= book.title %></h3>
-    <%= book.author_id %>
-    <%= link_to 'Show', book %>
-    <%= link_to 'Edit', edit_book_path(book) %>
-    <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <h4><%= book.author_id %> [TO DO: Look up author by ID]</h4>
+    <%= link_to 'Show', book, class: 'btn btn-primary' %>
+    <%= link_to 'Edit', edit_book_path(book), class: 'btn btn-primary' %>
+    <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
   </div>
 <% end %>
-
-<br>
-
-<%= link_to 'New Book', new_book_path %>
 
 <%= paginate @books %>
