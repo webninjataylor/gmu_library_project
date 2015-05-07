@@ -11,5 +11,11 @@
     <% if @author.awards? %>
       <p><label>Awards:</label> <%= @author.awards %></p>
     <% end %>
+    <p>
+      <label>Books:</label>
+      <%= @author.books do |book| %>
+        <%= book.title %>
+      <% end %>
+    </p>
   </div>
 </div>

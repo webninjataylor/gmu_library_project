@@ -26,6 +26,7 @@
 * Dropdown of authors when creating a book (Taylor)
 * Authors view details - include list of their books (Taylor)
 * Search for specific books (by title, author, or ISBN) (Wellson)
+* Style search (Taylor)
 * Reserve books ()
   * Must re-check number available when reserving in case they had been sitting idle
 * Return books
