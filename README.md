@@ -1,6 +1,6 @@
 == Library Project Requirements
 
-~~Books model~~
+* ~~Books model~~
 * ~~Books seeds~~
 * ~~Books view (all)~~
 * ~~Twitter Bootstrap~~
