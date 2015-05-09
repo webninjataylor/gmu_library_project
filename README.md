@@ -17,6 +17,7 @@
 * ~~Users seeds~~
 * ~~Twitter Bootstrap~~
 * ~~Kanimari pagination~~
+* ~~Authors view details - include list of their books~~
 
 ## To Do
 
@@ -24,7 +25,7 @@
 * Users model validations (Mike)
 * Books model validations (Taylor)
 * Dropdown of authors when creating a book (Taylor)
-* Authors view details - include list of their books (Taylor)
+
 * Search for specific books (by title, author, or ISBN) (Wellson)
 * Style search (Taylor)
 * Reserve books ()
@@ -39,4 +40,3 @@
   * User registration
   * User management
   * Author management
-  

@@ -12,9 +12,9 @@
       <p><label>Awards:</label> <%= @author.awards %></p>
     <% end %>
     <p>
-      <label>Books:</label>
+      <label>Publications:</label>
       <% @author.books.each do |book| %>
-        <%= book.title %>
+        <p><%= image_tag(book.image_cover_url) %> <%= link_to(book.title, book_path(book)) %> by <%= @author.name %> </p>
       <% end %>
     </p>
   </div>
