@@ -6,7 +6,7 @@
   </div>
   <div class="col-md-10">
     <h2><%= @book.title %></h2>
-    <h5>by <%= @book.author.name %></h5>
+    <h5>by <%= link_to(@book.author.name, author_path(@book.author)) %></h5>
     <p><%= @book.abstract%></p>
     <p><label>ISBN:</label> <%= @book.isbn %></p>
     <p><label>Genre:</label> <%= @book.genre %></p>
