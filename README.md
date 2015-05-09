@@ -18,7 +18,7 @@
 * ~~Twitter Bootstrap~~
 * ~~Kanimari pagination~~
 * ~~Authors view details - include list of their books~~
-* ~~Search for specific books (by title, author, or ISBN) ~~
+* ~~Search for specific books (by title, author, or ISBN)~~
 
 ## To Do
 
