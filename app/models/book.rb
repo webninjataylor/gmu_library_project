@@ -12,7 +12,7 @@ class Book < ActiveRecord::Base
   has_many :reservations, dependent: :destroy
 
   def self.search(query)
-    where("title like ?", "%#{query}%")
+    Book.joins(:author).where("name like ? OR title like ? OR isbn = ?", "%#{query}%", "%#{query}%", "#{query}")
   end
 
 end

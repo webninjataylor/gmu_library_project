@@ -18,6 +18,7 @@
 * ~~Twitter Bootstrap~~
 * ~~Kanimari pagination~~
 * ~~Authors view details - include list of their books~~
+* ~~Search for specific books (by title, author, or ISBN) ~~
 
 ## To Do
 
@@ -25,10 +26,8 @@
 * Users model validations (Mike)
 * Books model validations (Taylor)
 * Dropdown of authors when creating a book (Taylor)
-
-* Search for specific books (by title, author, or ISBN) (Wellson)
 * Style search (Taylor)
-* Reserve books ()
+* Reserve books (Wellson)
   * Must re-check number available when reserving in case they had been sitting idle
 * Return books
 * View reservations
