@@ -5,8 +5,12 @@
 <%= page_entries_info @books %>
 
 <%= form_tag(books_path, method: "get") do %>
-  <%= text_field_tag(:search, params[:search]) %>
-  <%= submit_tag "Search", :name => nil %>
+  <div class="input-group search-library">
+    <%= text_field_tag(:search, params[:search], class: 'form-control') %>
+    <span class="input-group-btn">
+      <%= submit_tag "Search", :name => nil, class: 'btn btn-default' %>
+    </span>
+  </div>
 <% end %>
 
 <%= render 'books' %>
