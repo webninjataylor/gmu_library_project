@@ -20,13 +20,13 @@
 * ~~Authors view details - include list of their books~~
 * ~~Search for specific books (by title, author, or ISBN)~~
 * ~~Dropdown of authors when creating a book~~
+* ~~Search styling~~
 
 ## To Do
 
 * Login/logout (Mike)
 * Users model validations (Mike)
 * Books model validations (Taylor: all except author inclusion are done; need help)
-* Style search (Taylor)
 * Reserve books (Wellson)
   * Must re-check number available when reserving in case they had been sitting idle
 * Return books
