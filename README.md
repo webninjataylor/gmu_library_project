@@ -32,7 +32,7 @@
 * Return books
 * View reservations
 * Admin users (Mike)
-  * CRUD books
+  * CRUD books (need author dropdown on create page)
   * View overdue books
 * No SQL injection vulnerabilities
 
