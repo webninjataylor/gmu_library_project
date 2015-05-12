@@ -14,7 +14,9 @@
     <p>
       <label>Publications:</label>
       <% @author.books.each do |book| %>
-        <p><%= image_tag(book.image_cover_url) %> <%= link_to(book.title, book_path(book)) %> by <%= @author.name %> </p>
+        <div class="thumbnail">
+          <%= image_tag(book.image_cover_url) %> <%= link_to(book.title, book_path(book)) %>
+        </div>
       <% end %>
     </p>
   </div>
