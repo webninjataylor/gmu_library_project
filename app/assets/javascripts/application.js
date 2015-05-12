@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  // Adding Bootstrap class to select box since class isn't working in the view for this field.
+  if($('#book_author_id')){
+    $('#book_author_id').addClass('form-control');
+  }
+});
