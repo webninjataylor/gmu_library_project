@@ -13,7 +13,14 @@
     <p><label>Pages:</label> <%= @book.pages %></p>
     <p><label>Published on:</label> <%= @book.published_on.to_formatted_s(:long) %></p>
     <p><label>Total in library:</label> <%= @book.total_in_library %></p>
-    <%= button_to 'Reserve', reservations_path(:book_id => @book.id, :book_title => @book.title) %>
+
+    <% if @book.total_in_library > 0 %>
+      <%= button_to 'Reserve', reservations_path(:book_id => @book.id, :book_title => @book.title) %>
+    <% else %>
+      <p> There are no more available copies to be reserved</p>
+    <% end %>
+
+
     <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-primary' %>
     <%= button_to 'Delete', @book,
               method: :delete,

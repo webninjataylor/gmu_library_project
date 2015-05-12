@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   resources :users
   resources :books
 
+  get "/reservations/overdue" => "reservations#show", as: 'overdue'
+
   get "/authors" => "authors#index", as: 'authors'
   get "/authors/:id" => "authors#show", as: 'author'
 
