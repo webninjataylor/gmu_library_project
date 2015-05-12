@@ -44,7 +44,7 @@ class Book < ActiveRecord::Base
   validates :pages, :total_in_library,
      numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :genre, inclusion: { in: GENRES, message: "%{value} is not a valid genre" }
-  # validates :author_id, inclusion: { in: Author.pluck(:id), message: "%{value} is not a valid author" }
+  validates :author_id, inclusion: { in: Author.pluck(:id), message: "%{value} is not a valid author" }
 
   has_many :reservations, dependent: :destroy
 

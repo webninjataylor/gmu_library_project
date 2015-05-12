@@ -21,12 +21,12 @@
 * ~~Search for specific books (by title, author, or ISBN)~~
 * ~~Dropdown of authors when creating a book~~
 * ~~Search styling~~
+* ~~Books model validations~~
 
 ## To Do
 
 * Login/logout (Mike)
 * Users model validations (Mike)
-* Books model validations (Taylor: all except author inclusion are done; need help)
 * Reserve books (Wellson)
   * Must re-check number available when reserving in case they had been sitting idle
 * Return books
