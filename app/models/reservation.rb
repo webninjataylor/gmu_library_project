@@ -8,7 +8,7 @@ class Reservation < ActiveRecord::Base
 
   def set_dates
     self.reserved_on = Time.now
-    self.due_on = Time.now + 10
+    self.due_on = 10.days.from_now
     self.created_at = Time.now
     self.updated_at = Time.now
   end

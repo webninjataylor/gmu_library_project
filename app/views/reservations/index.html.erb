@@ -5,14 +5,14 @@
 <%= @user.id %>
 <%= @user.user_id %>
 
-    <p>
-      <label>Reservations:</label>
-      <% @user.reservations.each do |res| %>
-        Book_id: <%= res.book_id %>
-        Reserved On: <%= res.reserved_on %>
-        Due On: <%= res.due_on %>
-        <%= button_to 'Return Book', res,
-              method: :delete,
-              data: {confirm: 'Are you sure?' }%>
-      <% end %>
-    </p>
+<p>
+  <label>Reservations:</label>
+  <% @user.reservations.each do |res| %>
+    Book_id: <%= res.book_id %>
+    Reserved On: <%= res.reserved_on %>
+    Due On: <%= res.due_on %>
+    <%= button_to 'Return Book', res,
+          method: :delete,
+          data: {confirm: 'Are you sure?' }%>
+  <% end %>
+</p>

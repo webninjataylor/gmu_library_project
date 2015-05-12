@@ -5,9 +5,6 @@ class ReservationsController < ApplicationController
     @user = User.first
   end
 
-  # Check to make sure there are enough copies to reserve
-  # Maybe pass the user_id and book_id to this method
-  # get book title to pass as a notice?
   # can I call index? get all reservations after a save to display all reservations
   def create
     @book = Book.find_by_id(params[:book_id])
@@ -20,10 +17,10 @@ class ReservationsController < ApplicationController
       if @reservation.save && @book.update(total_in_library: @book.total_in_library - 1)
         redirect_to reservations_path, notice: "#{@book.title} has been reserved"
       else
-        render :new
+        redirect_to book_path(@book), notice: "Problems reserving #{@book.title}"
       end
     else # if not enough copies return back to the show page of the book
-      redirect_to book_path(@book), notice: "Not enough copies to reserve"
+      redirect_to book_path(@book), notice: "Not enough copies of #{@book.title} to reserve"
     end
   end
 
