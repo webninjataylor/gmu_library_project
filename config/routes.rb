@@ -9,11 +9,12 @@ Rails.application.routes.draw do
   get "sessions/create"
   get "sessions/destroy"
 
-  get "/authors" => "authors#index", as: 'authors'
-  get "/authors/:id" => "authors#show", as: 'author'
-
+  resources :reservations
   resources :users
   resources :books
+
+  get "/authors" => "authors#index", as: 'authors'
+  get "/authors/:id" => "authors#show", as: 'author'
 
   root 'sessions#new'
 
