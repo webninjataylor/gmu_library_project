@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :genre %><br>
-    <%= f.text_field :genre %>
+    <%= f.select :genre, Book::GENRES, { prompt: "Pick one" } %>
   </div>
   <div class="field">
     <%= f.label :abstract %><br>
