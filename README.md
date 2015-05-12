@@ -22,6 +22,7 @@
 * ~~Dropdown of authors when creating a book~~
 * ~~Search styling~~
 * ~~Books model validations~~
+* ~~No SQL injection vulnerabilities~~
 
 ## To Do
 
@@ -33,7 +34,6 @@
 * Admin users (Mike)
   * CRUD books (need author dropdown on create page)
   * View overdue books
-* No SQL injection vulnerabilities
 
 ## Extra Credit
 
