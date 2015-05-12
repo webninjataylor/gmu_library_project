@@ -23,6 +23,7 @@
 * ~~Search styling~~
 * ~~Books model validations~~
 * ~~No SQL injection vulnerabilities~~
+* ~~Author dropdown on book create page~~
 
 ## To Do
 
@@ -32,7 +33,7 @@
 * Return books
 * View reservations
 * Admin users (Mike)
-  * CRUD books (need author dropdown on create page)
+  * CRUD books
   * View overdue books
 
 ## Extra Credit
