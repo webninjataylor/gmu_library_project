@@ -4,17 +4,23 @@
   <p id= "notice" ><%= flash[:alert] %></p>
 <% end %>
 
-<%= form_tag do %>
-  <div class="field">
-    <%= label_tag :user_id, 'User ID:' %>
-    <%= text_field_tag :user_id, params[:user_id] %>
+<%= form_tag('/login', class: 'form-horizontal') do %>
+  <div class="form-group">
+    <%= label_tag :user_id, 'User ID:', class: 'control-label col-sm-2' %>
+    <div class="col-sm-4">
+      <%= text_field_tag :user_id, params[:user_id], class: 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= label_tag :password, 'Password:' %>
-    <%= password_field_tag :password, params[:password] %>
+  <div class="form-group">
+    <%= label_tag :password, 'Password:', class: 'control-label col-sm-2' %>
+    <div class="col-sm-4">
+      <%= password_field_tag :password, params[:password], class: 'form-control' %>
+    </div>
   </div>
-  <div class="field">
-    <%= submit_tag "Logon" %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= submit_tag "Logon", class: 'btn btn-primary' %>
+    </div>
   </div>
 
 <% end %>
