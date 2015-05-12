@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @users = User.all
+    @users = User.order(:name)
     render :index
   end
 
@@ -21,15 +21,6 @@ class UsersController < ApplicationController
 
   def login
     render :login
-  end
-
-  def create
-    user = User.find_by_email(params[:email])
-    if user && user.authenticate(params[:password])
-      redirect_to @user, :notice => "#{user.user_id} is logged on"
-    else
-      render "new"
-    end
   end
 
   def create
@@ -57,7 +48,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :user_id, :password_digest)
+    params.require(:user).permit(:name, :user_id, :password, :password_confirmation)
   end
 
   def set_user
