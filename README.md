@@ -26,7 +26,6 @@
 ## To Do
 
 * Login/logout (Mike)
-* Users model validations (Mike)
 * Reserve books (Wellson)
   * Must re-check number available when reserving in case they had been sitting idle
 * Return books
