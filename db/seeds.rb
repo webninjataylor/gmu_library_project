@@ -50,7 +50,7 @@ Author.where(name: 'L.M. Montgomery')
   biography:          "Lucy Maud Montgomery (November 30, 1874 – April 24, 1942), publicly known as L. M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with Anne of Green Gables. Anne of Green Gables was an immediate success. The central character, Anne, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.[1] The first novel was followed by a series of sequels with Anne as the central character. Montgomery went on to publish 20 novels as well as 530 short stories, 500 poems, and 30 essays. Most of the novels were set on Prince Edward Island, Canada, and places in the Canadian province became literary landmarks. She was made an Officer of the Order of the British Empire in 1935.",
   image_url:          'authors/montgomery.jpg'
 )
-    
+
 Book.where(isbn: '054792822X')
     .first_or_create!(
   title:              'The Hobbit',
@@ -205,44 +205,37 @@ Book.where(isbn: '0545139708')
   updated_at:         DateTime.new(2015, 4, 29)
 )
 
-User.where(user_id: 'user1')
+User.where(user_id: 'admin1')
     .first_or_create!(
-  name:               'George Washington',
-  password_digest:    'XXXXXX',
-  admin:              false
+  name:               'Smitty',
+  password_digest:    BCrypt::Password.create('admin123'),
+  admin:              true
 )
 
-User.where(user_id: 'user2')
+User.where(user_id: 'admin2')
     .first_or_create!(
-  name:               'George Bush',
-  password_digest:    'XXXXXX',
-  admin:              false
+  name:               'Frank',
+  password_digest:    BCrypt::Password.create('admin123'),
+  admin:              true
 )
 
-User.where(user_id: 'user3')
-    .first_or_create!(
-  name:               'Barack Obama',
-  password_digest:    'XXXXXX',
-  admin:              false
-)
-
-User.where(user_id: 'user4')
+User.where(user_id: 'test1')
     .first_or_create!(
   name:               'Bill Clinton',
-  password_digest:    'XXXXXX',
+  password_digest:    BCrypt::Password.create('password1'),
   admin:              false
 )
 
-User.where(user_id: 'user5')
+User.where(user_id: 'test2')
     .first_or_create!(
-  name:               'Teddy Roosevelt',
-  password_digest:    'XXXXXX',
+  name:               'George Bush',
+  password_digest:    BCrypt::Password.create('password2'),
   admin:              false
 )
 
-User.where(user_id: 'user6')
+User.where(user_id: 'test3')
     .first_or_create!(
-  name:               'James Monroe',
-  password_digest:    'XXXXXX',
+  name:               'Barack Obama',
+  password_digest:    BCrypt::Password.create('password3'),
   admin:              false
 )
