@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [ :show, :edit, :update, :destroy ]
 
   def index
-    @users = User.order(:name)
+    @users = User.order(:user_id)
     render :index
   end
 
