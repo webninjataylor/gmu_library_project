@@ -5,10 +5,10 @@
     </div>
     <div class="panel-body">
       <%= link_to books_path, class: 'btn btn-default btn-block' do %>
-        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Browse All Books
+        <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Browse All Books
       <% end %>
       <%= link_to reservations_path, class: 'btn btn-default btn-block' do %>
-        <span class="glyphicon-th-list" aria-hidden="true"></span> My Reservations
+        <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> My Reservations
       <%end%>
       <%= link_to new_book_path, class: 'btn btn-default btn-block' do %>
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add New Book
@@ -17,7 +17,7 @@
         <span class="glyphicon glyphicon-user" aria-hidden="true"></span> View Authors
       <%end%>
       <%= link_to overdue_path, class: 'btn btn-default btn-block' do %>
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Overdue Books
+        <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Overdue Books
       <%end%>
     </div>
   </div>
