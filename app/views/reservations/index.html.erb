@@ -1,18 +1,17 @@
-<p id="notice"><%= notice %></p>
-
 <h2>My Reservations</h2>
 
-<%= @user.id %>
-<%= @user.user_id %>
-
-<p>
-  <label>Reservations:</label>
-  <% @user.reservations.each do |res| %>
-    Book_id: <%= res.book_id %>
-    Reserved On: <%= res.reserved_on %>
-    Due On: <%= res.due_on %>
+<% @user.reservations.each do |res| %>
+  <div class="well">
+    <%= image_tag(res.book.image_cover_url, class: 'img-thumbnail') %>
+    <h3><%= res.book.title %></h3>
+    <h4><%= res.book.author.name %></h4>
+    <p><strong>Reserved On:</strong> <%= res.reserved_on.to_formatted_s(:long) %></p>
+    <p><strong>Due On:</strong> <%= res.due_on.to_formatted_s(:long) %></p>
     <%= button_to 'Return Book', res,
           method: :delete,
-          data: {confirm: 'Are you sure?' }%>
-  <% end %>
-</p>
+          data: {confirm: 'Are you sure?' },
+          class: 'btn btn-primary' %>
+
+
+  </div>
+<% end %>
