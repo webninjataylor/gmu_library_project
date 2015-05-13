@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  skip_before_action :authorize_admin
-
   before_action :set_user, only: [ :show, :edit, :update, :destroy ]
 
   def index
