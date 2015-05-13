@@ -15,7 +15,7 @@
 
     <% count = @book.reservations.where("user_id = ?", session[:user_id])
     # Checks to see if the user has this book checked out
-    if !count.empty? %>
+    if count %>
       <p> You already have this book checked out </p>
     <% elsif @book.total_in_library > 0 %>
       <%= button_to 'Reserve', reservations_path(:user_id => session[:user_id] , :book_id => @book.id), class: 'btn btn-primary' %>
