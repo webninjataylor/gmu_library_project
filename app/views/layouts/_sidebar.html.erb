@@ -29,13 +29,13 @@
         <%end%>
 
         <%= link_to logout_path, :method => :delete, class: 'btn btn-default btn-block' do %>
-          <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Log Out
+          <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Out
         <%end%>
 
       <%else%>
 
          <%= link_to login_path, class: 'btn btn-default btn-block' do %>
-          <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Log In
+          <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Log In
         <%end%>
 
       <%end%>
