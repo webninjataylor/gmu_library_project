@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  # skip_before_action :authorize # See pg.214 of AgileRailsTextbook
+
   def new
   end
 
