@@ -15,7 +15,7 @@
     <p><label>Total in library:</label> <%= @book.total_in_library %></p>
 
     <% if @book.total_in_library > 0 %>
-      <%= button_to 'Reserve', reservations_path(:book_id => @book.id, :book_title => @book.title) %>
+      <%= button_to 'Reserve', reservations_path(:book_id => @book.id, :book_title => @book.title), class: 'btn btn-primary' %>
     <% else %>
       <p> There are no more available copies to be reserved</p>
     <% end %>
@@ -24,6 +24,7 @@
     <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-primary' %>
     <%= button_to 'Delete', @book,
               method: :delete,
-              data: {confirm: 'Are you sure?' }%>
+              data: {confirm: 'Are you sure?' },
+              class: 'btn btn-danger' %>
   </div>
 </div>
