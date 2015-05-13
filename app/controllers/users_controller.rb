@@ -19,10 +19,6 @@ class UsersController < ApplicationController
     render :edit
   end
 
-  def login
-    render :login
-  end
-
   def create
     @user = User.new(user_params)
     if @user.save
