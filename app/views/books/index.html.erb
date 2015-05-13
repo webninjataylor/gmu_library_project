@@ -1,16 +1,21 @@
 <h2><%= @title %></h2>
 
-<%= page_entries_info @books %>
+<% user = User.find_by(id: session[:user_id])
+        if user %>
+  <%= page_entries_info @books %>
 
-<%= form_tag(books_path, method: "get") do %>
-  <div class="input-group search-library">
-    <%= text_field_tag(:search, params[:search], class: 'form-control') %>
-    <span class="input-group-btn">
-      <%= submit_tag "Search", :name => nil, class: 'btn btn-default' %>
-    </span>
-  </div>
+  <%= form_tag(books_path, method: "get") do %>
+    <div class="input-group search-library">
+      <%= text_field_tag(:search, params[:search], class: 'form-control') %>
+      <span class="input-group-btn">
+        <%= submit_tag "Search", :name => nil, class: 'btn btn-default' %>
+      </span>
+    </div>
+  <% end %>
+
+  <%= render 'books' %>
+
+  <%= paginate @books %>
+<% else %>
+<h2>NOT LOGGED IN</h2>
 <% end %>
-
-<%= render 'books' %>
-
-<%= paginate @books %>
