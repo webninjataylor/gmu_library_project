@@ -25,12 +25,11 @@
 * ~~No SQL injection vulnerabilities~~
 * ~~Author dropdown on book create page~~
 * ~~Login/logout~~
+* ~~Reserve books~~
+* ~~Return books~~
 
 ## To Do
 
-* Reserve books (Wellson)
-  * Must re-check number available when reserving in case they had been sitting idle
-* Return books
 * View reservations
 * Admin users (Mike)
   * CRUD books
