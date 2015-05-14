@@ -13,7 +13,9 @@
     <p><label>Total in library:</label> <%= @book.total_in_library %></p>
 
 
-    <% count = @book.reservations.where("user_id = ?", session[:user_id])
+    <%
+    user = User.find_by(id: session[:user_id])
+    count = @book.reservations.where("user_id = ?", session[:user_id])
     # Checks to see if the user has this book checked out
     if count %>
       <p> You already have this book checked out </p>
@@ -24,14 +26,14 @@
     <% end %>
 
 
-    <% user = User.find_by(id: session[:user_id])
-          if user.admin %>
+    <%
+    if user.admin %>
       <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-primary' %>
       <%= button_to 'Delete', @book,
                 method: :delete,
                 data: {confirm: 'Are you sure?' },
                 class: 'btn btn-danger' %>
-    <%end%>
+    <% end %>
 
   </div>
 </div>
