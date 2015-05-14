@@ -27,12 +27,12 @@
 * ~~Login/logout~~
 * ~~Reserve books~~
 * ~~Return books~~
+* ~~View reservations~~
 
 ## To Do
 
-* View reservations
 * Admin users (Mike)
-  * CRUD books
+  * CRUD books (Taylor to add Mike's authentication check)
   * View overdue books
 
 ## Extra Credit
