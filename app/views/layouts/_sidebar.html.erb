@@ -12,23 +12,26 @@
         <%= link_to reservations_path, class: 'btn btn-default btn-block' do %>
           <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> My Reservations
         <%end%>
-        <%= link_to new_book_path, class: 'btn btn-default btn-block' do %>
-          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add New Book
+
+        <% if user.admin %>
+          <%= link_to new_book_path, class: 'btn btn-default btn-block' do %>
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add New Book
+          <%end%>
         <%end%>
+
         <%= link_to authors_path, class: 'btn btn-default btn-block' do %>
           <span class="glyphicon glyphicon-user" aria-hidden="true"></span> View Authors
         <%end%>
-        <%= link_to overdue_path, class: 'btn btn-default btn-block' do %>
-          <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Overdue Books
+
+        <% if user.admin %>
+          <%= link_to overdue_path, class: 'btn btn-default btn-block' do %>
+            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> Overdue Books
+          <%end%>
         <%end%>
 
         <%- # Login OR Logout + User Details depending on login -%>
         <% user = User.find_by(id: session[:user_id])
           if user %>
-
-          <%= link_to user, class: 'btn btn-default btn-block' do %>
-            <span class="glyphicon glyphicon-alert" aria-hidden="true"></span><%= user.user_id %>
-          <%end%>
 
           <%= link_to logout_path, :method => :delete, class: 'btn btn-default btn-block' do %>
             <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Log Out
