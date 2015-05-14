@@ -28,11 +28,11 @@
 * ~~Reserve books~~
 * ~~Return books~~
 * ~~View reservations~~
+* ~~Only admins can CRUD books~~
 
 ## To Do
 
 * Admin users (Mike)
-  * CRUD books (Taylor to add Mike's authentication check)
   * View overdue books
 
 ## Extra Credit
