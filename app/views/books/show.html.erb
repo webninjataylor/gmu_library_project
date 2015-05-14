@@ -12,12 +12,16 @@
     <p><label>Published on:</label> <%= @book.published_on.to_formatted_s(:long) %></p>
     <p><label>Total in library:</label> <%= @book.total_in_library %></p>
 
-    <% if @book.total_in_library > 0 %>
-      <%= button_to 'Reserve', reservations_path(:book_id => @book.id, :book_title => @book.title), class: 'btn btn-primary' %>
+
+    <% count = @book.reservations.where("user_id = ?", session[:user_id])
+    # Checks to see if the user has this book checked out
+    if !count.empty? %>
+      <p> You already have this book checked out </p>
+    <% elsif @book.total_in_library > 0 %>
+      <%= button_to 'Reserve', reservations_path(:user_id => session[:user_id] , :book_id => @book.id), class: 'btn btn-primary' %>
     <% else %>
       <p> There are no more available copies to be reserved</p>
     <% end %>
-
 
     <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-primary' %>
     <%= button_to 'Delete', @book,
