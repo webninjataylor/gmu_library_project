@@ -24,10 +24,10 @@
 * ~~Books model validations~~
 * ~~No SQL injection vulnerabilities~~
 * ~~Author dropdown on book create page~~
+* ~~Login/logout~~
 
 ## To Do
 
-* Login/logout (Mike)
 * Reserve books (Wellson)
   * Must re-check number available when reserving in case they had been sitting idle
 * Return books
